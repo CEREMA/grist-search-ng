@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: APP_BASE_HREF=/grist-search-ng npm run build
+    - run: npm run deploy
     - run: npm test
     - name: Setup Pages
       uses: actions/configure-pages@v5
