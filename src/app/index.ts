@@ -4,10 +4,6 @@ import { ButtonModule } from "primeng/button";
 import { InputTextModule } from "primeng/inputtext";
 import { TableModule } from "primeng/table";
 
-export interface CustomWindow extends Window {
-  grist;
-}
-
 interface SearchResult {
   name: string;
   score: number;
@@ -34,13 +30,12 @@ export class Index {
         },
       ];
     });
-    const w: CustomWindow = window;
-    w.grist.ready({
+    window.grist.ready({
       allowSelectBy: true,
       requiredAccess: "read table",
     });
 
-    w.grist.onRecords((records: []) => {
+    window.grist.onRecords((records: []) => {
       alert(`record count ${records.length}`);
     });
   }
