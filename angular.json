@@ -61,7 +61,10 @@
               "buildTarget": "grist-search-ng:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "allowedHosts": true
+          }
         },
         "test": {
           "builder": "@angular/build:unit-test"

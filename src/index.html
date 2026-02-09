@@ -2,12 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>GristSearchNg</title>
+    <title>Rechercher</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://docs.getgrist.com/grist-plugin-api.js"></script>
   </head>
   <body>
+    <script>
+    // biome-ignore-start lint/style/useTemplate: matomo snippet
+    // biome-ignore lint/suspicious/noAssignInExpressions: matomo snippet
+    var _paq = (window._paq = window._paq || []);
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (() => {
+      // biome-ignore suppressions/parse: matomo snippet
+      var u = "https://stats.cerema.fr/";
+      _paq.push(["setTrackerUrl", u + "piwik.php"]);
+      _paq.push(["setSiteId", "78"]);
+      var d = document,
+        g = d.createElement("script"),
+        s = d.getElementsByTagName("script")[0];
+      g.async = true;
+
+      g.src = u + "piwik.js";
+      s.parentNode.insertBefore(g, s);
+    })();
+    // biome-ignore-end lint/style/useTemplate: matomo snippet
+    </script>
     <app-root></app-root>
   </body>
 </html>
