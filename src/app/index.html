@@ -1,10 +1,16 @@
+<style>
+tr.selected {
+  background-color: lightgrey;
+}
+</style>
+
 <div>
   <label>
     🔍Rechercher
     <input type="text" pInputText [(ngModel)]="value">
   </label>
 </div>
-<p-table [value]="results">
+<p-table [value]="results()">
   <ng-template #header>
     <tr>
       <th>Titre</th>
@@ -18,7 +24,7 @@
     </tr>
   </ng-template>
   <ng-template #body let-result>
-    <tr>
+    <tr (click)="click(result.index)" [class.selected]="result.selected">
       <td>{{ result.name }}</td>
       <td>{{ result.score }}</td>
     </tr>
