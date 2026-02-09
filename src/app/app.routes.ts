@@ -1,3 +1,10 @@
 import type { Routes } from "@angular/router";
 
-export const routes: Routes = [];
+import { Index } from "./index";
+
+export const routes: Routes = [
+  {
+    path: "",
+    component: Index,
+  },
+];
