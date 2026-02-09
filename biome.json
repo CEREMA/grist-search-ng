@@ -8,8 +8,10 @@
     "indentStyle": "space"
   },
   "html": {
+    "experimentalFullSupportEnabled": true,
     "parser": {
       "interpolation": true
-    }
+    },
+    "formatter": { "enabled": true }
   }
 }
