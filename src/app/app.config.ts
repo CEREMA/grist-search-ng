@@ -1,10 +1,12 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  type ApplicationConfig,
+  provideBrowserGlobalErrorListeners,
+} from "@angular/core";
+import { provideRouter } from "@angular/router";
+import Aura from "@primeuix/themes/aura";
 
-import { routes } from './app.routes';
-
-import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeuix/themes/aura';
+import { providePrimeNG } from "primeng/config";
+import { routes } from "./app.routes";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,8 +14,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     providePrimeNG({
       theme: {
-        preset: Aura
-      }
-    })
-  ]
+        preset: Aura,
+      },
+    }),
+  ],
 };
