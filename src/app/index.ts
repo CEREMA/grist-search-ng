@@ -67,11 +67,11 @@ export class Index {
           },
           {
             name: "mots_cles",
-            weight: 0.5,
+            weight: 0.1,
           },
           {
             name: "description",
-            weight: 0.1,
+            weight: 0.5,
           },
         ],
         includeScore: true,
