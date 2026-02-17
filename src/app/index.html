@@ -14,6 +14,13 @@ tr.selected {
   <ng-template #header>
     <tr>
       <th>Titre</th>
+      <th>
+        <abbr
+          title="entre 0 et 1, zéro (0) pour une correspondance parfaite, un (1) pour résultat très éloigné"
+        >
+          Score
+        </abbr>
+      </th>
     </tr>
   </ng-template>
   <ng-template #body let-result>
